@@ -12,6 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     container: devkitpro/devkita64:latest
     steps:
+    - name : apt
+      run: |
+        apt update
+        apt full-upgrade -y
+        apt install *cmake* -y
+
+    - name: dkp-pacman
+      run: |
+        dkp-pacman -S switch-dev --noconfirm
+        dkp-pacman -S switch-portlibs --noconfirm
+    
     - name: "Checkout repo"
       uses: actions/checkout@v3
       with:
