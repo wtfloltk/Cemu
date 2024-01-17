@@ -1,14 +1,7 @@
 name: Build Cemu A64
 
 on:
-  workflow_call:
-    inputs:
-      deploymode:
-        required: false
-        type: string
-      experimentalversion:
-        required: false
-        type: string
+  workflow_dispatch:
 
 env:
   VCPKG_ROOT: "${{github.workspace}}/dependencies/vcpkg"
