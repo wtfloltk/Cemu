@@ -17,6 +17,9 @@ jobs:
         apt update
         apt full-upgrade -y
         apt install *cmake* -y
+        git clone --recursive https://github.com/Kitware/CMake.git
+        cd CMake
+        ./bootstrap && (make && make install); (make && sudo su && make install);
 
     - name: dkp-pacman
       run: |
