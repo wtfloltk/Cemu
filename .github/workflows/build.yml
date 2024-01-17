@@ -83,6 +83,6 @@ jobs:
       uses: actions/upload-artifact@v3
       if: ${{ inputs.deploymode == 'release' }}
       with:
-        name: cemu-bin-linux-x64
+        name: cemu-bin-hos-arm64(aarch64/a64)(nintendoswitch)(libnx)
         path: ./bin/Cemu
  
